@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,900');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  display: flex;
+  color: #333;
+  align-items: center;
+  background-image: url(cover.jpg);
+  background-color: #f2f2f2;
+  background-size: cover;
+  background-position: center;
+}
+
+ul {
+  list-style: none;
+}
+
+body>div {
+  flex: 1;
+}
+
+.todolist {
+  background: #fff;
+  padding: 30px 15px;
+  width: 320px;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 2px 2px 15px -5px rgba(0, 0, 0, 0.5);
+}
+
+.head h3 {
+  font-size: 26px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.todo {
+  display: flex;
+  border-radius: 40px;
+  margin-bottom: 25px;
+  padding: 8px;
+  box-shadow: 0 0 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.todo.error {
+  box-shadow: 0 0 30px -5px #F44336;
+}
+
+.todo>* {
+  flex: 5;
+}
+
+.todo input {
+  padding: 10px 15px;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  font-size: 16px;
+}
+
+.todo input:focus {
+  outline: none;
+}
+
+.todo button[name=submit] {
+  flex: 1;
+  background: #4CAF50;
+  font-size: 38px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 40px;
+}
+
+.remove {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  background: #F44336;
+  color: #fff;
+  font-size: 13px;
+  padding: 2px 5px;
+  border-radius: 34px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+.body ul {
+  padding: 0 20px;
+}
+
+.body ul li {
+  position: relative;
+  font-size: 18px;
+  padding: 10px 0;
+  text-align: left;
+  transition: all 0.5s;
+}
+
+.body ul li:hover {
+  padding-left: 30px;
+}
+
+.body ul li:hover .remove {
+  visibility: visible;
+}
+
+.body ul li.done {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: line-through;
+}
+
+.copyright {
+  margin-top: 45px;
+}
+
+.copyright ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.copyright ul li {
+  display: inline-block;
+  margin: 0 5px;
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.copyright ul li a {
+  text-decoration: none;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #333;
+  color: #fff;
+}
