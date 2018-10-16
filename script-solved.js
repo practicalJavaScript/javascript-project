@@ -7,9 +7,7 @@ const selectTipPerPerson = document.querySelector('.tip_per_person span');
 const data = {
   bill: 0,
   tip: 0,
-  person: 1,
-  total: 0,
-  tip_per_person: 0
+  person: 1
 }
 
 // ইনপুট ভ্যালিডেট করা, ইনপুট আসলেই নাম্বার কিনা
@@ -23,16 +21,29 @@ tipCalculator.addEventListener('change', (e) => {
   if(validateInput(e.target.value)) {
     // ইনপুট ঠিক থাকলে আমরা আমাদের এরর ক্লাসটা সরিয়ে নিবো ইনপুট থেকে
     e.target.classList.remove('err');
+
     // এখন আমরা আমাদের টার্গেগেটেড ইলিমেন্টটার ভ্যালু অ্যাসাইন করবো(এজন্যেই ডাটা স্ট্রাকচারের কীগুলোর নাম ইনপুট ফিল্ডের নামের সাথে মিল রেখেছি), আর সেই ভ্যালো যাতে ফ্লোট নাম্বার হয় সেটাও খেয়াল রাখবো
     data[e.target.name] = parseFloat(e.target.value);
+
+    // টোটাল টিপ কতো আসে সেটা হিসেব করা
+    const tip = (data.bill * data.tip) / 100;
+
     // টোটাল হিসেব করবো
-    data.total = data.bill + (data.bill * data.tip / 100);
+    let total = data.bill + tip;
+    // পার পার্সন হিসেব করা
+    total = total / data.person;
+    // টোটালটার দশমিককে ফিক্সড করে দেওয়া
+    total = total.toFixed(2);
     // টোটালটা আমাদের ডকুমেন্ট এ শো করাবো
-    selectTotal.textContent = data.total;
-    // পার পারসন টিপ কতো করে আসে সেটা হিসেব করবো
-    data.tip_per_person = parseFloat(data.tip / data.person);
-    // পার পারসন এর টিপ টা ডকুমেন্ট এ দেখাবো
-    selectTipPerPerson.textContent = data.tip_per_person;
+    selectTotal.textContent = total;
+
+    // পার পার্শনের টিপ কতো আসে সেটা হিসেব করা
+    let tip_per_person = tip / data.person;
+    // দশমিককে ফিক্সড করে দেওয়
+    tip_per_person = tip_per_person.toFixed(2);
+    // ডকুমেন্ট এ শো করানো
+    selectTipPerPerson.textContent = tip_per_person;
+
   } else {
     // ইনপুট ভ্যালিড না হলে এরর ক্লাস লাগাবো ইউজারকে সুন্দর একটা ভুল হয়েছে ইফেক্ট দেওয়ার জন্যে
     e.target.classList.add('err');
