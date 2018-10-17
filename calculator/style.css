@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,900');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  display: flex;
+  color: #333;
+  align-items: center;
+  background-image: url(cover.png);
+  background-color: #f2f2f2;
+  background-size: cover;
+  background-position: center;
+}
+
+body>div {
+  flex: 1;
+}
+
+.calculator {
+  width: 320px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+}
+
+.display {
+  color: #4b4c4c;
+  padding: 30px 25px;
+  font-size: 42px;
+  text-align: right;
+  background-color: #efefef;
+}
+
+.display .result {
+  overflow: hidden;
+}
+
+.display .inputs input {
+  font-size: 22px;
+  font-weight: 900;
+  width: 100%;
+  background: transparent;
+  border: none;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 3px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+}
+
+.keypad {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 10px;
+}
+
+.keypad>p {
+  flex-basis: calc(100% / 4 - 30px);
+  margin: 10px 15px;
+  font-weight: 900;
+  padding: 15px 10px;
+  border-radius: 50px;
+}
+
+.keypad .big {
+  flex: 2;
+  flex-basis: calc(100% / 3)
+}
+
+.keypad .function {
+  background: #efefef;
+  box-shadow: 0 5px 13px -5px rgba(0, 0, 0, 0.5);
+}
+
+.keypad .col-purple {
+  background: #9C27B0;
+  color: #fff;
+}
+
+.keypad .col-orange {
+  background: #FF9800;
+  color: #fff;
+}
+
+.keypad .col-deepgreen {
+  background: #1B5E20;
+  color: #fff;
+}
+
+.keypad .col-red {
+  background-color: #F44336;
+  color: #fff;
+}
+
+.keypad .col-green {
+  background: #4CAF50;
+  color: #fff;
+}
+
+
+.keypad .disabled {
+  cursor: not-allowed;
+  background: #E0E0E0;
+}
+
+.copyright {
+  margin-top: 45px;
+}
+
+.copyright ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.copyright ul li {
+  display: inline-block;
+  margin: 0 5px;
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.copyright ul li a {
+  text-decoration: none;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #fff;
+}

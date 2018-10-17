@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,900');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background: url(cover.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+body>div {
+  flex: 1;
+}
+
+.header h2 {
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.calculator {
+  display: flex;
+  color: #fff;
+  padding: 25px;
+  width: 600px;
+  margin: 0 auto;
+  border-radius: 4px;
+  background: #141E30;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.calculator>div,
+.calculator>form {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.result {
+  align-self: center;
+}
+
+.tip_per_person {
+  border-bottom: solid 1px rgba(255, 255, 255, 0.25);
+}
+
+.result div {
+  padding: 15px 0;
+}
+
+.result div p {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.result div .amount_tip,
+.result div .amount_total {
+  font-size: 36px;
+  font-weight: 900;
+  margin: 5px 0;
+}
+
+input {
+    border: solid 2px transparent;
+    padding: 15px 10px;
+    font-size: 15px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+input.err {
+  border: solid 2px #F44336;
+}
+
+.input-group {
+    margin: 10px 0;
+}
+
+.input-group label {
+    display: block;
+    text-align: left;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.copyright {
+  margin-top: 45px;
+  color: #fff;
+}
+
+.copyright ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.copyright ul li {
+  display: inline-block;
+  margin: 0 5px;
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.copyright ul li a {
+  text-decoration: none;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #fff;
+}
