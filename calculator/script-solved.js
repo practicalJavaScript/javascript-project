@@ -7,24 +7,6 @@ const selectResult = document.querySelector('.result p');
 // ইনপুট ডাটা
 let data = '';
 
-// ইনপুট ভ্যালিডেট করা, ইনপুট ক্যালকুলেশন করার মতো কিনা
-const validateInput = input => {
-  // রেগুলার এক্সপ্রেশন দিয়ে ইনপুট যাচাই
-  return (/^[-+]?[0-9\.]+?([-+*/x%]+[-+]?[0-9\.]+)*$/).test(input);
-}
-
-// ইকুয়্যাল বাটনের অবস্থার ফাংশন
-const equalBtnState = (value) => {
-  // ইনপুট ফিল্ডের ডাটা ভ্যালিডেট করা
-  if(validateInput(value)) {
-    // ইকুয়্যাল বাটন একমাত্র ইনপুট ক্যালকুলেট করার মতো হলেই ক্লিক এনাবল করা
-    selectEqualBtn.classList.remove('disabled');
-  } else {
-    // নাইলে বাটন ডিসাবল করে রাখা
-    selectEqualBtn.classList.add('disabled');
-  }
-}
-
 // ইনপুট ফিল্ডের চেঞ্জ ইভেন্ট
 selectInput.addEventListener('change', (e) => {
   // ইনপুট ফিল্ডের ইনপুট ডাটাতে স্টোর করে ফেলা
@@ -72,7 +54,25 @@ selectEqualBtn.addEventListener('click', () => {
   if(!selectEqualBtn.classList.contains('disabled')) {
     // আমাদের ম্যাথমেটিক্যাল এক্সপ্রেশন তৈরী, এখন এটাকে ইভালিউট করা
     const result = eval(data);
-    // এবার রেসাল্ট ইউজারকে দেখানো 
+    // এবার রেসাল্ট ইউজারকে দেখানো
     selectResult.textContent = result;
   }
 })
+
+// ইকুয়্যাল বাটনের অবস্থার ফাংশন
+const equalBtnState = (value) => {
+  // ইনপুট ফিল্ডের ডাটা ভ্যালিডেট করা
+  if(validateInput(value)) {
+    // ইকুয়্যাল বাটন একমাত্র ইনপুট ক্যালকুলেট করার মতো হলেই ক্লিক এনাবল করা
+    selectEqualBtn.classList.remove('disabled');
+  } else {
+    // নাইলে বাটন ডিসাবল করে রাখা
+    selectEqualBtn.classList.add('disabled');
+  }
+}
+
+// ইনপুট ভ্যালিডেট করা, ইনপুট ক্যালকুলেশন করার মতো কিনা
+const validateInput = input => {
+  // রেগুলার এক্সপ্রেশন দিয়ে ইনপুট যাচাই
+  return (/^[-+]?[0-9\.]+?([-+*/x%]+[-+]?[0-9\.]+)*$/).test(input);
+}
