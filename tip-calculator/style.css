@@ -35,14 +35,12 @@ body>div {
 
 .calculator {
   display: flex;
-  color: #fff;
+  color: rgba(0, 0, 0, 0.75);
   padding: 25px;
   width: 600px;
   margin: 0 auto;
   border-radius: 4px;
-  background: #141E30;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #fff;
 }
 
 .calculator>div,
@@ -64,8 +62,8 @@ body>div {
 }
 
 .result div p {
-    font-size: 18px;
-    text-transform: uppercase;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
 .result div .amount_tip,
@@ -76,11 +74,11 @@ body>div {
 }
 
 input {
-    border: solid 2px transparent;
-    padding: 15px 10px;
-    font-size: 15px;
-    width: 100%;
-    border-radius: 4px;
+  border: solid 2px rgba(0, 0, 0, 0.2);
+  padding: 15px 10px;
+  font-size: 15px;
+  width: 100%;
+  border-radius: 4px;
 }
 
 input.err {
@@ -88,15 +86,16 @@ input.err {
 }
 
 .input-group {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .input-group label {
-    display: block;
-    text-align: left;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 5px;
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  text-align: left;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 .copyright {
