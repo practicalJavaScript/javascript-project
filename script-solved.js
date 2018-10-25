@@ -10,11 +10,6 @@ const data = {
   person: 1
 }
 
-// ইনপুট ভ্যালিডেট করা, ইনপুট আসলেই নাম্বার কিনা
-const validateInput = input => {
-  return (/^\d+$/).test(input);
-}
-
 // ফর্মের ইনপুট ফিল্ডে কোনোরকম পরিবর্তন আসলেই আমরা অ্যাকশন নিবো
 tipCalculator.addEventListener('change', (e) => {
   // ফর্মের ইনপুট ঠিক আছে কি নেই সেটার উপর ভিত্তি করে এখানে অ্যাকশন নিবো
@@ -49,3 +44,8 @@ tipCalculator.addEventListener('change', (e) => {
     e.target.classList.add('err');
   }
 });
+
+// ইনপুট ভ্যালিডেট করা, ইনপুট আসলেই নাম্বার কিনা
+const validateInput = input => {
+  return (/^\d+$/).test(input);
+}
